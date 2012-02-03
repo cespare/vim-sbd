@@ -1,54 +1,27 @@
 sbd.vim
 =======
 
-*sbd*'s sole aim is to close buffers smartly.
+**Close buffers smartly**.
 
-Vim's `:bdelete` closes the current buffer along with its window. Disregarding the window type, or whether we want to keep the window or not. This behavior becomes very painful when you start juggling with buffers a lot.
+Because Vim's vanilla buffer closing/deletion becomes painful as soon as you start working with multiple buffers and windows.
 
-What *sbd* does is to close the current buffer while leaving the window layout intact. Simple, powerful.
-
-By default, it won't delete a buffer boasting unsaved changes. And, it'll close the window of a special buffer (e.g. quickfix, help, directory, scratch, etc). `:help sbd.vim` to see how to modify the default behavior.
+*sbd* allows you to close buffers while leaving your window layout intact. As a bonus, deleting a special buffer (e.g. *quickfix*, *help*, *directory*, *scratch*, etc) will automatically close the window holding it. Making these special buffers easier to deal with.
 
 
-## Installation with Pathogen
+## Installation
 
-Since this plugin has rolling versions based on git commits, using [pathogen] and git is the preferred way to install and keep *sbd* up-to-date.
+If you don't have a preferred installation method, I recommend installing [pathogen](https://github.com/tpope/vim-pathogen), and then run:
 
-1. Install [pathogen](https://github.com/tpope/vim-pathogen) into `~/.vim/autoload/` and add this line to your `vimrc`:
+    cd ~/.vim/bundle
+    git clone git://github.com/orftz/sbd.vim.git
 
-        call pathogen#infect()
+Then, add the following to your *vimrc*, as-is or tweaked to your taste:
 
-Then, make sure you also have a `filetype plugin indent on` line in there.
+    nnoremap <silent> <leader>bd :Sbd<CR>
 
-2. Create `~/.vim/bundle/`:
+Now, enjoy.
 
-        mkdir ~/.vim/bundle
-
-From here, there's two way to do it — choose your path.
-
-### The vanilla way
-
-3. Make a clone of the `sbd.vim` repository in it:
-
-        git clone https://github.com/orftz/sbd.vim.git bundle/sbd
-
-4. Updating is straightforward: `cd` in the repo's directory and pull in the latest changes:
-
-        cd ~/.vim/bundle/sbd
-        git pull
-
-### The submodule way
-
-3. Add a clone of the `sbd.vim` repository into it:
-
-        git submodule add https://github.com/orftz/sbd.vim.git bundle/sbd
-
-4. To update your submodules all at once (yeah — neat!):
-
-        cd ~/.vim
-        git submodule foreach git checkout master
-        git submodule foreach git pull
-        git submodule update --init
+Once help tags have been generated, you can view the manual with `:help sbd.vim`.
 
 
 ## License ([ISC](https://en.wikipedia.org/wiki/ISC_license))
