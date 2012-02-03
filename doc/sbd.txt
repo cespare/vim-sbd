@@ -18,18 +18,13 @@ CONTENTS                                                      *sbd-contents*
 ==============================================================================
 1. Intro                                                          *sbdIntro*
 
-sbd's sole aim is to close buffers smartly.
+Vim's vanilla buffer closing/deletion becomes painful as soon as you
+start working with multiple buffers and windows.
 
-|:bdelete| closes the current buffer along with its window. Disregarding the
-window type, or whether we want to keep the window or not. This behavior
-becomes very painful when you start juggling with buffers a lot.
-
-What sbd does is to close the current buffer while leaving the window layout
-intact. Simple, powerful.
-
-By default, it won't delete a buffer boasting unsaved changes. And, it'll
-close the window of a special buffer (e.g. |quickfix|, |help|, |directory|,
-|scratch|, etc). See |sbdConfig| to modify this behavior.
+sbd allows you to close buffers while leaving your window layout intact. As
+a bonus, deleting a special buffer (e.g. |quickfix|, |help|, |directory|,
+|scratch|, etc) will automatically close the window holding it. Making these
+special buffers easier to deal with.
 
 
 ==============================================================================
@@ -105,6 +100,9 @@ and send a pull request.
 
 ==============================================================================
 7. Changelog                                                  *sbdChangelog*
+
+v1.0.1
+    * Documentation and README clarification.
 
 v1.0.0
     * Initial stable release.
