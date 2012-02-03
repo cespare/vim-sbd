@@ -31,9 +31,7 @@ Enjoy.
 
 ## Changelog
 
-**1.1.1** — This note
-
-* NOTE: I may have screwed up a merge in **1.1.0**. If you're running in such a problem, simply re-install the plugin. Sorry for the fuss.
+**1.1.1** — NOTE: I may have screwed up a merge in **1.1.0**. If you're running in such a problem, simply re-install the plugin. Sorry for the fuss.
 
 **1.1.0** — DeleteBuffer() modes
 
