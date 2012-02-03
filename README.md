@@ -7,7 +7,7 @@ Vim's `:bdelete` closes the current buffer along with its window. Disregarding t
 
 What *sbd* does is to close the current buffer while leaving the window layout intact. Simple, powerful.
 
-By default, it won't delete a buffer boasting unsaved changes. And, it'll close the window of a special buffer (e.g. quickfix, help, directory, scratch, etc). `:help sbd.txt` to see how to modify the default behavior.
+By default, it won't delete a buffer boasting unsaved changes. And, it'll close the window of a special buffer (e.g. quickfix, help, directory, scratch, etc). `:help sbd.vim` to see how to modify the default behavior.
 
 
 ## Installation with Pathogen
