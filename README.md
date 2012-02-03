@@ -12,18 +12,29 @@ Because Vim's vanilla buffer closing/deletion becomes painful as soon as you sta
 
 ## Installation
 
-If you don't have a preferred installation method, I recommend installing [pathogen](https://github.com/tpope/vim-pathogen), and then run:
+If you don't have a preferred installation method, I recommend installing [pathogen](https://github.com/tpope/vim-pathogen), and run:
 
     cd ~/.vim/bundle
     git clone git://github.com/orftz/sbd.vim.git
 
 Then, add the following to your *vimrc*, as-is or tweaked to your taste:
 
-    nnoremap <silent> <leader>bd :Sbd<CR>
-
-Now, enjoy.
+    nnoremap <silent> <leader>bd    :Sbd<CR>
 
 Once help tags have been generated, you can view the manual with `:help sbd.vim`.
+
+Enjoy.
+
+
+## Changelog
+
+**1.0.3** — Better README
+
+**1.0.2** — Flattr button
+
+**1.0.1** — Documentation and README clarification
+
+**1.0.0** — Initial stable release
 
 
 ## License ([ISC](https://en.wikipedia.org/wiki/ISC_license))
