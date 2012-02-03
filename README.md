@@ -1,6 +1,8 @@
 sbd.vim
 =======
 
+<a href="http://flattr.com/thing/477131/sbd-vim" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+
 **Close buffers smartly**.
 
 Because Vim's vanilla buffer closing/deletion becomes painful as soon as you start working with multiple buffers and windows.
