@@ -20,6 +20,9 @@ If you don't have a preferred installation method, I recommend installing [patho
 Then, add the following to your *vimrc*, as-is or tweaked to your taste:
 
     nnoremap <silent> <leader>bd    :Sbd<CR>
+    nnoremap <silent> <leader>bdm   :Sbdm<CR>
+
+`:Sbd` closes the buffer normally, while `:Sbdm` closes the buffer disregarding if it has unsaved changes or not.
 
 Once help tags have been generated, you can view the manual with `:help sbd.vim`.
 
@@ -27,6 +30,11 @@ Enjoy.
 
 
 ## Changelog
+
+**1.1.0** - DeleteBuffer() modes
+
+* `modeNormal` used via `:Sbd` does the normal thing
+* `modeCloseModified` used via `:Sbdm` closes the buffer even if it's modified (has unsaved changes)
 
 **1.0.3** — Better README
 

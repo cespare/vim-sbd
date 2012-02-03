@@ -30,11 +30,13 @@ special buffers easier to deal with.
 ==============================================================================
 2. Usage                                                          *sbdUsage*
 
-Add the following to your |vimrc|: >
+Add the following to your |vimrc|, as-is or tweaked to your taste: >
 
-    nnoremap <silent> <leader>bd :Sbd<CR>
+    nnoremap <silent> <leader>bd    :Sbd<CR>
+    nnoremap <silent> <leader>bdm   :Sbdm<CR>
 
-Up to you to map it differently or not. I don't.
+`:Sbd` closes the buffer normally, while `:Sbdm` closes the buffer
+disregarding if it has unsaved changes or not.
 
 
 ==============================================================================

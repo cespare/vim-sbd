@@ -7,22 +7,29 @@ if exists('loaded_sbd')
 endif
 let loaded_sbd = 1
 
-silent command! -nargs=0 Sbd    :call <SID>DeleteBuffer()
-
 if !exists('g:sbd_delete_anyway')
     let g:sbd_delete_anyway = 0
 endif
+
 if !exists('g:sbd_close_special')
     let g:sbd_close_special = 1
 endif
 
-function <SID>DeleteBuffer()
+let s:modeNormal = 'n'
+let s:modeCloseModified = 'm'
+
+silent command! -nargs=0 Sbd    call <SID>DeleteBuffer(s:modeNormal)
+silent command! -nargs=0 Sbdm   call <SID>DeleteBuffer(s:modeCloseModified)
+
+function <SID>DeleteBuffer(mode)
     let s:sbdBuffer = bufnr("%")
     let s:sbdBufferCount = 0
     let s:sbdEmptyBuffer = 0
     let s:sbdWindow = winnr()
 
-    if (getbufvar(s:sbdBuffer, '&modified') == 1 && g:sbd_delete_anyway == 0)
+    if (a:mode != s:modeCloseModified
+                \ && getbufvar(s:sbdBuffer, '&modified') == 1
+                \ && g:sbd_delete_anyway == 0)
         echom "sbd: save your changes first."
         return
     endif
