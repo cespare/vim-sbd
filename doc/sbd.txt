@@ -103,11 +103,21 @@ and send a pull request.
 ==============================================================================
 7. Changelog                                                  *sbdChangelog*
 
-v1.0.1
-    * Documentation and README clarification.
+**1.1.1** — NOTE: I may have screwed up a merge in **1.1.0**. If you're
+running in such a problem, simply re-install the plugin. Sorry for the fuss.
 
-v1.0.0
-    * Initial stable release.
+**1.1.0** — DeleteBuffer() modes
+
+* `modeNormal` used via `:Sbd` does the normal thing
+* `modeCloseModified` used via `:Sbdm` closes the buffer even if it's modified
+
+**1.0.3** — Better README
+
+**1.0.2** — Flattr button
+
+**1.0.1** — Documentation and README clarification
+
+**1.0.0** — Initial stable release
 
 
 ==============================================================================
