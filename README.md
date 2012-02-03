@@ -3,24 +3,18 @@ sbd.vim
 
 *sbd*'s sole aim is to close buffers smartly.
 
-`:bdelete` closes the current buffer along with its window. Disregarding the
-window type, or whether we want to keep the window or not. This behavior
-becomes very painful when you start juggling with buffers a lot.
+Vim's `:bdelete` closes the current buffer along with its window. Disregarding the window type, or whether we want to keep the window or not. This behavior becomes very painful when you start juggling with buffers a lot.
 
-What sbd does is to close the current buffer while leaving the window layout
-intact. Simple, powerful.
+What *sbd* does is to close the current buffer while leaving the window layout intact. Simple, powerful.
 
-By default, it won't delete a buffer boasting unsaved changes. And, it'll close
-the window of a special buffer (e.g. quickfix, help, directory, scratch, etc).
-See sbdConfig to modify this behavior.
+By default, it won't delete a buffer boasting unsaved changes. And, it'll close the window of a special buffer (e.g. quickfix, help, directory, scratch, etc). `:help sbd.txt` to see how to modify the default behavior.
+
 
 ## Installation with Pathogen
 
-Since this plugin has rolling versions based on git commits, using [pathogen]
-and git is the preferred way to install and keep *sbd* up-to-date.
+Since this plugin has rolling versions based on git commits, using [pathogen] and git is the preferred way to install and keep *sbd* up-to-date.
 
-1. Install [pathogen] into `~/.vim/autoload/` and add this line to your
-   `vimrc`:
+1. Install [pathogen](https://github.com/tpope/vim-pathogen) into `~/.vim/autoload/` and add this line to your `vimrc`:
 
         call pathogen#infect()
 
@@ -55,8 +49,6 @@ From here, there's two way to do it — choose your path.
         git submodule foreach git checkout master
         git submodule foreach git pull
         git submodule update --init
-
-[pathogen]: https://github.com/tpope/vim-pathogen
 
 
 ## License ([ISC](https://en.wikipedia.org/wiki/ISC_license))
