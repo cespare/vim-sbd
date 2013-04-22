@@ -1,6 +1,6 @@
 # NOTE
 
-**This is a mirror of github.com/orftz/sbd. That github account appears to have been deleted.**
+**This is a mirror of github.com/orftz/sbd.vim. That github account appears to have been deleted.**
 
 sbd.vim
 =======
